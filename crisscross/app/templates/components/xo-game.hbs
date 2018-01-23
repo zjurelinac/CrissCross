@@ -1,0 +1,48 @@
+<header class="c-logo-header">
+    <img src="/assets/logo.png" alt="Criss-Cross" class="c-logo-img c-logo-img--small"/>
+</header>
+
+<div class="o-col-1-3"><div class="o-spacer-1"></div></div>
+<div class="c-main-content o-col-1-3">
+    <div class="c-board {{if game_service.allow_move 'c-board--enabled' 'c-board--disabled'}}">
+        <div class="c-board-row">
+            <div class="c-board-cell o-bdr o-bdb" {{action "move" 0}}>{{board.[0]}}</div>
+            <div class="c-board-cell o-bdl o-bdr o-bdb" {{action "move" 1}}>{{board.[1]}}</div>
+            <div class="c-board-cell o-bdl o-bdb" {{action "move" 2}}>{{board.[2]}}</div>
+        </div>
+        <div class="c-board-row">
+            <div class="c-board-cell o-bdt o-bdr o-bdb" {{action "move" 3}}>{{board.[3]}}</div>
+            <div class="c-board-cell o-bdt o-bdl o-bdr o-bdb" {{action "move" 4}}>{{board.[4]}}</div>
+            <div class="c-board-cell o-bdt o-bdl o-bdb" {{action "move" 5}}>{{board.[5]}}</div>
+        </div>
+        <div class="c-board-row">
+            <div class="c-board-cell o-bdt o-bdr" {{action "move" 6}}>{{board.[6]}}</div>
+            <div class="c-board-cell o-bdt o-bdl o-bdr" {{action "move" 7}}>{{board.[7]}}</div>
+            <div class="c-board-cell o-bdt o-bdl" {{action "move" 8}}>{{board.[8]}}</div>
+        </div>
+    </div>
+    <div class="c-game-info o-text-centered">
+        {{#unless game_service.finished}}
+            {{#if game_service.user_turn}}
+                <h3>It's your turn, {{side_symbol}}.</h3>
+            {{else}}
+                <h3>Opponent's turn...</h3>
+            {{/if}}
+
+            {{#if game_service.move_error}}
+                <div class="o-spacer-1"></div>
+                <p>Impossible move!</p>
+            {{/if}}
+        {{else}}
+            {{#if game_service.outcome_victory}}
+                <h3>You won the criss-cross battle, {{side_symbol}}!</h3>
+            {{/if}}
+            {{#if game_service.outcome_loss}}
+                <h3>You lost this criss-cross battle, {{side_symbol}}!</h3>
+            {{/if}}
+            {{#if game_service.outcome_draw}}
+                <h3>It's a draw!</h3>
+            {{/if}}
+        {{/unless}}
+    </div>
+</div>

@@ -1,0 +1,359 @@
+@import "reset.css";
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,700');
+
+/*******************************************************************************
+    Design guidelines:
+        # Colors:
+            - green = #27ae60
+                lighter = #2ecc71
+            - turqouise = #16a085
+                lighter = #1abc9c
+            - blue = #2980b9
+                lighter = #3498db
+            - purple = #8e44ad
+                lighter = #9b59b6
+            - red = #c0392b
+                lighter = #e74c3c
+            - dark = #2c3e50
+                lighter = #34495e
+            - gray = #7f8c8d
+                lighter = #95a5a6
+            - light_gray = #ecf0f1
+
+*******************************************************************************/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background: #fff;
+    color: #222;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    line-height: 1.25rem;
+}
+
+button, div, form, header, img, input, li, nav, section, ul, textarea {
+    box-sizing: border-box;
+}
+
+b {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+/*h1 {
+
+}*/
+
+h2 {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 2.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 2.5rem;
+}
+
+input {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    color: #222;
+    font-family: 'Raleway';
+    height: 3.75rem;
+    font-size: 1.25rem;
+    padding: 0.125rem 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+input:focus {
+    border: 1px solid #7f8c8d;
+}
+
+/******************************************************************************/
+
+.o-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.o-col-1-3 {
+    float: left;
+    width: 33%;
+}
+
+.o-button {
+    background: #95a5a6;
+    border: none;
+    color: #fff;
+    font-family: 'Raleway';
+    font-size: 1rem;
+    /*font-weight: 700;*/
+    line-height: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.o-button:hover {
+    background: #7f8c8d;
+    cursor: pointer;
+}
+
+.o-button--large {
+    background: #1abc9c;
+    font-size: 1.25rem;
+    line-height: 3.75rem;
+}
+
+.o-button--large:hover {
+    background: #16a085;
+}
+
+.o-button--alt {
+    background: #9b59b6;
+}
+
+.o-button--alt:hover {
+    background: #8e44ad;
+}
+
+.o-twostate {
+    background: #eee;
+    color: rgba(255, 255, 255, 0.75);
+    font-weight: 700;
+    font-size: 3.75rem;
+    height: 5rem;
+    margin: 10px auto;
+    width: 260px;
+}
+
+.o-twostate__left {
+    background: #3498db;
+    line-height: 5rem;
+    float: left;
+    height: 5rem;
+    padding-left: 20px;
+    width: 120px;
+}
+
+.o-twostate__left:hover {
+    background: #2980b9;
+    cursor: pointer;
+}
+
+.o-twostate__left:hover + .o-twostate__center {
+    border-top: 40px solid #2980b9;
+    border-left: 10px solid #2980b9;
+}
+
+.o-twostate__center {
+    border-top: 40px solid #3498db;
+    border-left: 10px solid #3498db;
+    border-right: 10px solid #e74c3c;
+    border-bottom: 40px solid #e74c3c;
+    float: left;
+    height: 5rem;
+    width: 20px;
+}
+
+.o-twostate__right:hover {
+    background: #c0392b;
+    cursor: pointer;
+}
+
+.o-twostate__right {
+    background: #e74c3c;
+    float: left;
+    height: 5rem;
+    line-height: 5rem;
+    padding-right: 20px;
+    text-align: right;
+    width: 120px;
+}
+
+.o-spacer-1 {
+    height: 1.25rem;
+    width: 100%;
+}
+
+.o-spacer-2 {
+    height: 2.5rem;
+    width: 100%;
+}
+
+.o-text-centered {
+    text-align: center;
+}
+
+.o-text-huge {
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+}
+
+.o-text-blue {
+    color: #2980b9;
+}
+
+.o-text-red {
+    color: #e74c3c;
+}
+
+.o-bdt {
+    border-top: 2px solid #222;
+}
+
+.o-bdb {
+    border-bottom: 2px solid #222;
+}
+
+.o-bdl {
+    border-left: 2px solid #222;
+}
+
+.o-bdr {
+    border-right: 2px solid #222;
+}
+
+/******************************************************************************/
+
+.c-app-wrapper {
+    margin: 20px auto;
+    width: 960px;
+}
+
+.c-logo-header {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.c-logo-img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.c-logo-img--small {
+    width: 150px;
+}
+
+.c-main-content--featured {
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+.c-side-content {
+    padding-left: 40px;
+}
+
+.c-game-stats {
+    margin: 20px 0;
+}
+
+.c-game-stats h3 {
+    border-bottom: 1px solid #aaa;
+}
+
+.c-game-stats__col {
+    border-right: 1px solid #aaa;
+    text-align: center;
+}
+
+.c-game-stats__col:last-child {
+    border-right: none;
+}
+
+.c-message-list {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+.c-message {
+    font-size: 0.9rem;
+    font-style: italic;
+    line-height: 1.25rem;
+    padding: 0.3125rem 0 0.3125rem 15px;
+}
+
+.c-message:before{
+    content: ">";
+    font-style: normal;
+    font-weight: 700;
+    margin-right: 5px;
+    margin-left: -15px;
+}
+
+.c-invite {
+    border-top: 1px solid #ddd;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+
+.c-invite-code {
+    background: #ecf0f1;
+    border: 1px solid #bdc3c7;
+    color: #222;
+    font-family: 'Raleway';
+    line-height: 3.75rem;
+    font-size: 1.25rem;
+    margin-top: 10px;
+    padding: 0.125rem 0.5rem;
+    text-align: center;
+    width: 100%;
+}
+
+.c-board {
+    height: 300px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.c-board-row {
+    overflow: hidden;
+}
+
+.c-board-cell {
+    float: left;
+    font-size: 5rem;
+    font-weight: 700;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    width: 100px;
+}
+
+.c-board--enabled {
+    cursor: pointer;
+}
+
+.c-board--disabled {
+    cursor: default;
+}
+
+.c-board--enabled .c-board-cell:hover {
+    background: #eee;
+}
+
+.c-board-cell--x {
+    color: #2980b9;
+}
+
+.c-board-cell--o {
+    color: #c0392b;
+}
+
+.c-game-info {
+    margin-top: 20px;
+}

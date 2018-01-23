@@ -1,0 +1,17 @@
+<header class="c-logo-header">
+    <img src="/assets/logo.png" alt="Criss-Cross" class="c-logo-img"/>
+</header>
+
+<div class="o-col-1-3"><div class="o-spacer-1"></div></div>
+<div class="c-main-content c-main-content--featured o-col-1-3">
+    <h3 class="o-text-centered">Welcome to the {{side_symbol}} side!</h3>
+    <div class="c-message-list">
+        {{#each game_service.messages as |msg|}}
+            <div class="c-message">{{msg}}</div>
+        {{/each}}
+    </div>
+    <div class="c-invite">
+        <p class="o-text-centered">Send this code to play with someone:</p>
+        <div class="c-invite-code">{{game_service.game_id}}</div>
+    </div>
+</div>

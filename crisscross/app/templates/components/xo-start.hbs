@@ -1,0 +1,47 @@
+<header class="c-logo-header">
+    <img src="/assets/logo.png" alt="Criss-Cross" class="c-logo-img"/>
+</header>
+
+{{#if WEBSOCKET_SUPPORT}}
+    <div class="o-col-1-3"><div class="o-spacer-1"></div></div>
+    <div class="c-main-content o-col-1-3">
+        <button class="o-button o-button--large" {{action "start_new"}}>New battle!</button>
+        <div class="o-spacer-2"></div>
+        <div class="o-info-text o-text-centered">&mdash; or &mdash;</div>
+        <div class="o-spacer-2"></div>
+        {{input type="text" value=game_id placeholder="Enter battle invite code" pattern="[a-zA-Z0-9]{8}"}}
+        <div class="o-spacer-1"></div>
+        <button class="o-button o-button--large o-button--alt" {{action "join_existing"}}>Join</button>
+    </div>
+
+    <div class="c-side-content o-col-1-3">
+        <h2>The war is ongoing...</h2>
+        <div class="o-text-line">So far, the battles resulted with:</div>
+
+        <div class="c-game-stats o-container">
+            <div class="c-game-stats__col o-col-1-3">
+                <h3 class="o-text-red">X</h3>
+                <div class="o-text-huge">{{stats_service.stats.wins_x}}</div>
+                <div class="o-text-small">victories</div>
+            </div>
+            <div class="c-game-stats__col o-col-1-3">
+                <h3>&mdash;</h3>
+                <div class="o-text-huge">{{stats_service.stats.draws}}</div>
+                <div class="o-text-small">draws</div>
+            </div>
+            <div class="c-game-stats__col o-col-1-3">
+                <h3 class="o-text-blue">O</h3>
+                <div class="o-text-huge">{{stats_service.stats.wins_o}}</div>
+                <div class="o-text-small">victories</div>
+            </div>
+        </div>
+
+        <div class="o-text-line">and <b>{{stats_service.stats.games_active}} battles</b> are being fought right at this moment.</div>
+
+        <h2>Whose side will <b>you</b> take?</h2>
+    </div>
+{{else}}
+    <p class="o-text-centered">Your browser doesn't support websockets,<br> so this game cannot be played.</p>
+    <h3 class = "o-text-centered">Sorry.</h3>
+    <p class="o-text-centered"><em>Perhaps try another browser?</em></p>
+{{/if}}
